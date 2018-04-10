@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>My Angular app</title>
+        <!-- Angularjs CDN(Content delivery network where we host library or static files) path 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>   --> 
+
+         <!-- Angularjs local path -->
+        <script src="libs/angular.js"></script>    
+        <script src="app.js"></script>
+        
+
+        <link rel="stylesheet" href="app.css" />
+    </head>
+    <body ng-app="demoApp">
+        
+        *************Angular example *************
+        <br />
+
+        <div ng-controller="MainController">            
+
+            <input type="text" value="" ng-model="title" ng- >
+            <div ng-repeat="title in titles track by $index">
+                <!-- <span ng-class="{ 'even' : $index%2 == 0 , 'odd' : $index%2 != 0 }">{{title}}</span> -->
+                <span ng-class-odd="odd" ng-class-even="even">{{title}}</span>
+            </div>
+
+            <div>
+                <button ng-click="btnClicked()"> OK </button>
+            </div>
+            <div my-tag>
+
+            </div>
+            <my-tag></my-tag>
+        </div>
+
+        <br />
+
+        ****************Legecy*************************
+        <br />
+
+        <input type="text" value="" id="sampleTitle" onkeyup="updateTitle()" >
+
+        <div id="title">
+            
+        </div>
+
+        <script src="legecy.js"></script>
+    </body>
+</html>
