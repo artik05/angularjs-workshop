@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>My Todo app</title>
+    <!-- Angularjs local path -->
+    <base href="/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css" />
+
+    <script src="libs/angular.js"></script>
+    <script src="libs/angular-route.min.js"></script>   
+</head>
+
+<body ng-app="todoApp">
+    
+    <div ng-view>
+        <!--here routing view will be inserted-->
+    </div>
+
+    <script src="app.js"></script>
+    <script src="app/controllers/home.ctrl.js"></script>
+    <script src="app/directives/todoList.js"></script>
+</body>
+
+</html>
