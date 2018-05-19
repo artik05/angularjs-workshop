@@ -1,6 +1,6 @@
 app.directive('todoList', function () {
     return {
-        restrict: 'E',
+        restrict: 'AE',
         scope: {
             tasks: '='
         },
@@ -9,6 +9,11 @@ app.directive('todoList', function () {
             $scope.tasks.push({
                 title: 'This is sample tile'
             });
+
+            $scope.removeTodo = function(rowCount){
+                //alert(rowCount);
+                $scope.tasks.splice(rowCount, 1);
+            }
         }
     };
 });

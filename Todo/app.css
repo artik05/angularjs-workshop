@@ -16,3 +16,7 @@
 .m-1{
     margin: 10px;
 }
+
+.text-red{
+    color:red !important; 
+}
